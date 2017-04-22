@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_mysqldb import MySQL
 
-from flask import render_template, request
+from flask import render_template, request, jsonify
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -35,7 +35,7 @@ def users():
 @app.route('/',methods=['POST'])
 def get_token():
 	token=request.form['symbol']
-	return str("token")
+	return jsonify({'name':'token'})
 	# cur = mysql.connection.cursor()
 
 
