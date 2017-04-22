@@ -6,11 +6,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1"> 
 	<title>stock prediction</title>
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/mystyles.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
+	<link href="../statics/bootstrap.min.css" rel="stylesheet">
+    <link href="../statics/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../statics/style.css" rel="stylesheet">
+    <link href="../statics/font-awesome.min.css" rel="stylesheet">
+    <link href="../statics/bootstrap-social.css" rel="stylesheet">
 
 </head>
 <body>
@@ -27,7 +27,7 @@
             </div>
 			<div id="navbar" class = "navbar-collapse collapse">
 				<ul class = "nav navbar-nav">
-					<li class="active"><a href ="#"><span class ="glyphicon glyphicon-home" aria-hidden="true"></span> Home </a></li>
+					<li class="active"><a href ="#"></span>Home</a></li>
 					<li><a href = "#">Contact</a></li>
 				</ul>
 			</div>
@@ -36,14 +36,31 @@
 
 	<header class="jumbotron">
         <div class="container">
-            <div class="row">
+            <div class="row row-header">
                 <div class = "col-xs-12" >
-                    <h1>Stock Prediction</h1>
-                    <p> Predict your stock today</p>
-                    <div class="form-group">
-          				<input type="text" class="form-control" placeholder="Search">
-        			</div>
-        			 <button type="submit" class="btn btn-default">Submit</button>
+                    <h1 class="text-center">Stock Prediction</h1>
+                    <p class="text-center"> Predict your stock today</p>
+                    <div>
+	                    <form class = "form-horizontal" role = "form">
+	        
+							<div class="form-group">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-6">
+								<select class="form-control">
+									<option>AAPL</option>
+									<option>MFST</option>
+									<option>BABA</option>
+									<option>FB</option>
+									<option>SNAP</option>
+								</select>
+						  		<!-- <input type="text" class="form-control" id="symbol" placeholder="Stock Symbol"> -->
+						  		</div>
+						  		<button style = "margin-left:40px" type="submit" class="btn btn-default">Submit</button>
+						    </div>
+							
+						</form>	
+					</div>
+        			
                 </div>
             </div>
         </div>
@@ -68,10 +85,11 @@
                         <li><a href="#">KAIFEI LEI</a></li>
                     </ul>
                 </div>
+                <div class = "col-sm-5"></div>
                 <div class="col-xs-12 col-sm-4">
                     <div class="nav navbar-nav" style="padding: 40px 10px;">
                         <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
                         <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
                         <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
