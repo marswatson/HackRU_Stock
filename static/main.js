@@ -5,7 +5,7 @@ $(document).ready(function() {
 				symbol : $('symbol').val()
 			},
 			type : 'POST',
-			url : '/draw'
+			url : '/'
 		})
 		event.preventDefault();
 	});
