@@ -32,10 +32,10 @@ def users():
     cur.execute(''' use stockr''') 
     return render_template('index.html')
 
-@app.route('/draw',methods=['POST'])
+@app.route('/',methods=['POST'])
 def get_token():
-	token=request.form['token_name']
-	return str(token)
+	token=request.form['symbol']
+	return str("token")
 	# cur = mysql.connection.cursor()
 
 
