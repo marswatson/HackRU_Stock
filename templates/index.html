@@ -69,8 +69,10 @@
     		<div class ="row row-content chart">
                     <div id="chart">
                         <script type="text/javascript">
-                            var symbol = '{{symbol[0]}}';
-                            
+
+                           
+                            var symbol = '{{symbol}}';
+
                         </script>
                     </div>
     		</div>
@@ -108,7 +110,7 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="{{url_for('static', filename='./candleStickChart.js')}}?ver=2.4"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='./candleStickChart.js')}}?ver=3.7"></script>
     <script type="text/javascript" src="{{url_for('static', filename='./main.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename='./test.js')}}"></script>
 </body>

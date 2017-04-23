@@ -30,16 +30,14 @@ app.config['DEBUG'] = True
 def users():
     #cur = mysql.connection.cursor()
     #cur.execute(''' use stockr''') 
-    return render_template('index.html')
+    return render_template('index.html', symbol='AAPL')
 
-@app.route('/<symbol>',methods=['GET', 'POST'])
-def get_symbol(symbol=None):
+@app.route('/<string:symbol>',methods=['GET', 'POST'])
+def get_symbol(symbol='	APPL'):
 	if request.method == 'POST':
 		symbol = request.form['symbol']
-		return render_template('index.html', symbol=symbol)
-	else:
-		symbol = [str(symbol)]
-		return render_template('index.html', symbol=symbol)
+	
+	return render_template('index.html', symbol1=symbol)
 
 	# cur = mysql.connection.cursor()
 

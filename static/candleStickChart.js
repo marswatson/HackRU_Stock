@@ -132,9 +132,9 @@
         document.getElementsByTagName("HEAD")[0].appendChild(scriptElement);
       }
 
+      
 
 
-
-      console.log(symbol);
+      
 
       $(document).ready(fetchData(symbol));
