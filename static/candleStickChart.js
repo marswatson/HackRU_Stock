@@ -132,4 +132,9 @@
         document.getElementsByTagName("HEAD")[0].appendChild(scriptElement);
       }
 
-      $(document).ready(fetchData("AAPL"));
+
+
+
+      console.log(symbol);
+
+      $(document).ready(fetchData(symbol));

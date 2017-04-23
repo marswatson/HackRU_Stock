@@ -32,13 +32,14 @@ def users():
     #cur.execute(''' use stockr''') 
     return render_template('index.html')
 
-@app.route('/PriceChart/<symbol>',methods=['GET', 'POST'])
+@app.route('/<symbol>',methods=['GET', 'POST'])
 def get_symbol(symbol=None):
 	if request.method == 'POST':
 		symbol = request.form['symbol']
-		return render_template('candleStick.html', symbol=symbol)
+		return render_template('index.html', symbol=symbol)
 	else:
-		return render_template('candleStick.html', symbol=symbol)
+		symbol = [str(symbol)]
+		return render_template('index.html', symbol=symbol)
 
 	# cur = mysql.connection.cursor()
 
