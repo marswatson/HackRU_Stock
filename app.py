@@ -1,15 +1,15 @@
 from flask import Flask
-from flask_mysqldb import MySQL
+#from flask_mysqldb import MySQL
 
 from flask import render_template, request
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_HOST'] = 'localhost'
-mysql = MySQL()
-mysql.init_app(app)
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_HOST'] = 'localhost'
+# mysql = MySQL()
+# mysql.init_app(app)
 
 # @app.route('/create_token/<token_name>/<password>')
 # def add_token():
@@ -28,15 +28,19 @@ mysql.init_app(app)
 
 @app.route('/')
 def users():
-    cur = mysql.connection.cursor()
-    cur.execute(''' use stockr''') 
+    #cur = mysql.connection.cursor()
+    #cur.execute(''' use stockr''') 
     return render_template('index.html')
 
-@app.route('/',methods=['POST'])
-def get_token():
-	token=request.form['symbol']
-	return str("token")
+@app.route('/PriceChart/<symbol>',methods=['GET', 'POST'])
+def get_symbol(symbol=None):
+	if request.method == 'POST':
+		symbol = request.form['symbol']
+		return render_template('candleStick.html', symbol=symbol)
+	else:
+		return render_template('candleStick.html', symbol=symbol)
 	# cur = mysql.connection.cursor()
+
 
 
 if __name__ == "__main__":
