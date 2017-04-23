@@ -1,7 +1,7 @@
 from flask import Flask
 #from flask_mysqldb import MySQL
 
-from flask import render_template, request
+from flask import render_template, request, jsonify
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -39,6 +39,7 @@ def get_symbol(symbol=None):
 		return render_template('candleStick.html', symbol=symbol)
 	else:
 		return render_template('candleStick.html', symbol=symbol)
+
 	# cur = mysql.connection.cursor()
 
 
