@@ -43,22 +43,14 @@
                     <h1 class="text-center">Stock Prediction</h1>
                     <p class="text-center"> Predict your stock today</p>
                     <div>
-	                    <form class = "form-horizontal" role = "form">
-							<div class="form-group">
-								<div class="col-sm-2"></div>
-								<div class="col-sm-6">
-									<select class="form-control" id = "symbol">
-										<option>AAPL</option>
-										<option>MFST</option>
-										<option>BABA</option>
-										<option>FB</option>
-										<option>SNAP</option>
-									</select>
-						  		<!-- <input type="text" class="form-control" id="symbol" placeholder="Stock Symbol"> -->
-						  		</div>
-						  		<button style = "margin-left:40px" type="submit" class="btn btn-default">Submit</button>
-						    </div>	
-						</form>	
+	                    <form class = "form-horizontal form-group" id="form1" name="searchForm" method="post" role = "form">
+                        <div class="col-sm-8">
+                             <input type="text" class="form-control" id="symbol1" placeholder="Stock Symbol" name = "symbol"> 
+                        </div>
+                        <div class="col-sm-4">    
+                            <input type="submit" style = "margin-left:40px" class="btn btn-default" id="btn"  value="submit" name = "Submit"/>
+                        </div>
+                    </form>
 					</div>	
                 </div>
             </div>
@@ -110,7 +102,7 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="{{url_for('static', filename='./candleStickChart.js')}}?ver=3.7"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='./candleStickChart.js')}}?ver=3.8"></script>
     <script type="text/javascript" src="{{url_for('static', filename='./main.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename='./test.js')}}"></script>
 </body>

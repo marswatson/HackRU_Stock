@@ -9,11 +9,11 @@ body{
 }
 
 .row-header .col-xs-12 .form-horizontal{
-	padding:0 200px;
+	padding:0 300px;
 }
 
-.row-header .col-xs-12 select{
-	width:380px;
+.row-header .col-xs-12 form{
+	padding:0 300px;
 }
 
 .row-content {
