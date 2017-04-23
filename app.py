@@ -33,11 +33,13 @@ def users():
     return render_template('index.html', symbol='AAPL')
 
 @app.route('/<string:symbol>',methods=['GET', 'POST'])
-def get_symbol(symbol='	APPL'):
+def get_symbol(symbol=None):
 	if request.method == 'POST':
 		symbol = request.form['symbol']
-	
-	return render_template('index.html', symbol1=symbol)
+	if symbol == None:
+		symbol = 'AAPL'
+
+	return render_template('index.html', symbol=symbol)
 
 	# cur = mysql.connection.cursor()
 
